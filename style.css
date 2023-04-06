@@ -1,0 +1,285 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.main-container {
+    border: 20px solid black;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+#backwheel, 
+#frontwheel {
+    animation: wheel 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+ #man-on-bike {
+    animation: moveforwards 4s infinite  ease-in-out;
+    z-index: -2;
+    transform: translateX(-1000px);
+
+} 
+
+#dog {
+    top: 500px;
+    position: absolute;
+    left: 890px;
+    animation: barkingdog 4s infinite ease-in-out; 
+    z-index: -1;
+}
+
+#cloud1{
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    animation: blowingclouds1 8s infinite ease-in-out;
+    z-index: 0;
+    color: whitesmoke;
+    fill: whitesmoke;
+}
+
+#cloud2{
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    top: 70px;
+    left:320px;
+    animation: blowingclouds2 9s infinite ease-in-out;
+    z-index: 0;
+    color: whitesmoke;
+    fill: whitesmoke;
+}
+
+#cloud3{
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    top: 40px;
+    left: 500px;
+    animation: blowingclouds3 10s infinite linear;
+    z-index: 0;
+    color: whitesmoke;
+    fill: whitesmoke;
+}
+
+
+
+#sunshine {
+    position: absolute;
+    top:30px;
+    left:50px;
+    z-index: 999;
+    animation: sunshine 10s infinite linear;
+}
+
+#small-bush {
+    z-index: 300;
+    top:490px;
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    right: 100px
+}
+
+#small-bush2 {
+    z-index: 101;
+    top:535px;
+    position: absolute;
+    width: 450px;
+    height: 240px;
+    right: 30px
+}
+
+#small-bush3 {
+    z-index: 500;
+    top: 353px;
+    position: absolute;
+    width: 255px;
+    height: 640px;
+    right: 178px
+}
+
+#small-bush4 {
+    z-index: 800;
+    top: 302px;
+    position: absolute;
+    width: 255px;
+    height: 740px;
+    right: 100px
+}
+
+#small-bush5 {
+    z-index: 800;
+    top: 250px;
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    right: 0px
+}
+
+#buildings {
+    width:520px;
+    position: absolute;
+    right: -75px;
+    height:700px;
+    top: 20px;
+    z-index: 0;
+}
+
+#ahouse {
+    top:267px;
+    right: 20px;
+    position: absolute;
+    z-index: 99;
+}
+
+.text-container {
+    border: 20px solid black;
+    height:170px;
+    text-align: center;
+    padding: 45px;
+}
+
+p{
+    font-size: 25px;
+    font-family: "Permanent Marker", sans-serif;
+    
+}
+
+
+@keyframes sunshine {
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0.75;
+    }
+    40%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.25;
+    }
+    80%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0.75;
+    }
+}
+
+@keyframes wheel {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes moveforwards {
+    0%{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(20px);
+       
+    }
+    100%{
+        transform-origin: translateX(100px);
+    } 
+}
+
+@keyframes barkingdog {
+    0%{
+        transform: translateX(0px);
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateX(-250px);
+       
+       
+    }
+    100%{
+        transform: translateX(-1100px);
+      
+    }
+}
+
+@keyframes blowingclouds1 {
+    0%{
+        transform: translateX(-10px);
+        /* transform: translateY(20px); */
+    }
+    20%{
+        transform: translateX(-40px);
+        transform: translateY(20px);
+    }
+    40%{
+        transform: translateX(-60px);
+       
+    }
+    90%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes blowingclouds2 {
+    0%{
+        transform: translateX(-10px);
+        /* transform: translateY(20px); */
+    }
+    25%{
+        transform: translateX(-40px);
+        transform: translateY(30px);
+    }
+    65%{
+        transform: translateX(-60px);
+       
+    }
+    90%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(1px);
+    }
+}
+
+@keyframes blowingclouds3 {
+    0%{
+        transform: translateX(-10px);
+        /* transform: translateY(20px); */
+    }
+    15%{
+        transform: translateX(-30px);
+        transform: translateY(10px);
+    }
+    70%{
+        transform: translateX(-60px);
+       
+    }
+    90%{
+        transform: translateX(-25px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
